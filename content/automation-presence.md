@@ -2,7 +2,7 @@
 title: "Créer une automation de détection de présence"
 excerpt: "Automatisez votre maison intelligente avec la détection de présence. Lumières, chauffage et sécurité s'adaptent automatiquement à votre présence."
 date: "2024-01-22"
-coverImage: "/images/covers/automation-presence.jpg"
+coverImage: "/images/covers/automation-presence.svg"
 category: "automation"
 tags: ["automation", "presence", "detection", "mouvement", "smartphone"]
 keywords: ["automation", "présence", "détection", "mouvement", "PIR", "smartphone", "géofencing"]

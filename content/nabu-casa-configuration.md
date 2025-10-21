@@ -2,7 +2,7 @@
 title: "Configuration de Nabu Casa pour Home Assistant"
 excerpt: "Découvrez comment configurer Nabu Casa (Home Assistant Cloud) pour un accès sécurisé à distance et profiter de l'intégration Google Assistant et Alexa sans configuration complexe."
 date: "2024-01-18"
-coverImage: "/images/covers/nabu-casa.jpg"
+coverImage: "/images/covers/nabu-casa.svg"
 category: "installation"
 tags: ["nabu-casa", "cloud", "accès-distant", "google-assistant", "alexa"]
 keywords: ["nabu casa", "cloud", "accès distant", "remote", "google assistant", "alexa", "configuration"]

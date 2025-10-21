@@ -2,7 +2,7 @@
 title: "Intégration Zigbee avec Home Assistant"
 excerpt: "Guide complet pour intégrer vos appareils Zigbee dans Home Assistant avec Zigbee2MQTT. Configuration, ajout d'appareils et automatisations."
 date: "2024-01-20"
-coverImage: "/images/covers/zigbee-integration.jpg"
+coverImage: "/images/covers/zigbee-integration.svg"
 category: "integration"
 tags: ["zigbee", "zigbee2mqtt", "mqtt", "integration", "capteurs"]
 keywords: ["zigbee", "zigbee2mqtt", "mqtt", "integration", "capteur", "ampoule", "sonoff"]

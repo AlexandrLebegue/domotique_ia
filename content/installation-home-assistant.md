@@ -2,7 +2,7 @@
 title: "Installation de Home Assistant sur serveur dédié"
 excerpt: "Guide complet pour installer Home Assistant sur un serveur Linux avec Docker. Configuration initiale et bonnes pratiques pour démarrer votre aventure domotique."
 date: "2024-01-15"
-coverImage: "/images/covers/installation-serveur.jpg"
+coverImage: "/images/covers/installation-serveur.svg"
 category: "installation"
 tags: ["home-assistant", "docker", "linux", "serveur", "installation"]
 keywords: ["installation", "serveur", "docker", "linux", "setup", "home assistant"]

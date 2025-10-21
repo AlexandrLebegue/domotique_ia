@@ -300,3 +300,133 @@
 html {
   scroll-behavior: smooth;
 }
+  
+  /* Chatbot Markdown Styles - Optimized for chat messages */
+  .chatbot-markdown {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .chatbot-markdown .prose {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 0;
+  }
+
+  .chatbot-markdown .prose * {
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  .chatbot-markdown .prose p,
+  .chatbot-markdown .prose div,
+  .chatbot-markdown .prose span {
+    width: 100%;
+    max-width: 100% !important;
+  }
+  
+  .chatbot-markdown .prose h1,
+  .chatbot-markdown .prose h2,
+  .chatbot-markdown .prose h3,
+  .chatbot-markdown .prose h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .chatbot-markdown .prose h1 {
+    font-size: 1.25rem;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 0.25rem;
+  }
+  
+  .chatbot-markdown .prose h2 {
+    font-size: 1.15rem;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 0.25rem;
+  }
+  
+  .chatbot-markdown .prose p {
+    margin-bottom: 0.75rem;
+  }
+  
+  .chatbot-markdown .prose ul,
+  .chatbot-markdown .prose ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+  }
+  
+  .chatbot-markdown .prose li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .chatbot-markdown .prose code {
+    font-size: 0.875em;
+    padding: 0.15rem 0.35rem;
+  }
+  
+  .chatbot-markdown .prose pre {
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .chatbot-markdown .prose pre code {
+    padding: 1rem;
+    font-size: 0.875rem;
+    display: block;
+    width: 100%;
+  }
+  
+  .chatbot-markdown .prose blockquote {
+    margin: 0.75rem 0;
+    padding: 0.5rem 1rem;
+  }
+  
+  .chatbot-markdown .prose table {
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .chatbot-markdown .prose .callout {
+    margin: 0.75rem 0;
+    padding: 0.75rem;
+  }
+  
+  .chatbot-markdown .prose .callout-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .chatbot-markdown .prose a {
+    color: #2563EB;
+    font-weight: 500;
+  }
+  
+  .chatbot-markdown .prose a:hover {
+    color: #1d4ed8;
+  }
+  
+  .chatbot-markdown .prose strong {
+    color: #1A1A1A;
+    font-weight: 600;
+  }
+  
+  .chatbot-markdown .prose hr {
+    margin: 1.5rem 0;
+  }
