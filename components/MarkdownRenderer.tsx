@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
-import ReactPlayer from 'react-player';
 import { FaCheck, FaCopy, FaInfoCircle, FaExclamationTriangle, FaLightbulb, FaBan, FaCheckCircle } from 'react-icons/fa';
 import 'highlight.js/styles/github-dark.css';
 
@@ -37,8 +36,8 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
         .prose h1 {
           font-size: 2.5rem;
           font-weight: 800;
-          margin-top: 2rem;
-          margin-bottom: 1.5rem;
+          margin-top: 4rem;
+          margin-bottom: 2.5rem;
           color: #111827;
           line-height: 1.2;
           border-bottom: 3px solid #3b82f6;
@@ -48,8 +47,8 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
         .prose h2 {
           font-size: 2rem;
           font-weight: 700;
-          margin-top: 2.5rem;
-          margin-bottom: 1.25rem;
+          margin-top: 4.5rem;
+          margin-bottom: 2rem;
           color: #1f2937;
           line-height: 1.3;
           border-bottom: 2px solid #e5e7eb;
@@ -60,8 +59,8 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
         .prose h3 {
           font-size: 1.5rem;
           font-weight: 600;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
+          margin-top: 3.5rem;
+          margin-bottom: 1.5rem;
           color: #374151;
           line-height: 1.4;
           scroll-margin-top: 100px;
@@ -70,8 +69,8 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
         .prose h4 {
           font-size: 1.25rem;
           font-weight: 600;
-          margin-top: 1.5rem;
-          margin-bottom: 0.75rem;
+          margin-top: 3rem;
+          margin-bottom: 1.25rem;
           color: #4b5563;
         }
 
@@ -358,14 +357,18 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
             const match = href?.match(youtubeRegex);
             
             if (match && match[1]) {
+              const videoId = match[1];
               return (
-                <div className="my-8 rounded-lg overflow-hidden shadow-xl">
-                  <ReactPlayer
-                    url={href}
+                <div className="my-8 rounded-lg overflow-hidden shadow-xl aspect-video">
+                  <iframe
                     width="100%"
-                    height="480px"
-                    controls
-                    className="react-player"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
                   />
                 </div>
               );
@@ -393,9 +396,9 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
             
             if (calloutMatch) {
               const type = calloutMatch[1].toLowerCase();
-              const cleanContent = content.replace(/^\[!.*?\]\s*/, '');
+              // const cleanContent = content.replace(/^\[!.*?\]\s*/, '');
               
-              const icons: { [key: string]: JSX.Element } = {
+              const icons: { [key: string]: React.ReactElement } = {
                 note: <FaInfoCircle className="callout-icon text-blue-600" />,
                 info: <FaInfoCircle className="callout-icon text-sky-600" />,
                 tip: <FaLightbulb className="callout-icon text-green-600" />,
@@ -418,7 +421,7 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
           },
           
           // Enhanced code block with language label and copy button
-          code: ({ node, inline, className, children, ...props }) => {
+          code: ({ inline, className, children, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) => {
             const match = /language-(\w+)/.exec(className || '');
             const language = match ? match[1] : '';
             const codeString = String(children).replace(/\n$/, '');
@@ -471,13 +474,12 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
           },
           
           // Enhanced image renderer
-          img: ({ src, alt, ...props }) => {
+          img: ({ src, alt }) => {
             return (
               <img
-                src={src}
+                src={src || ''}
                 alt={alt || ''}
                 loading="lazy"
-                {...props}
               />
             );
           },

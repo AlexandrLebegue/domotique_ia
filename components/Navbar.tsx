@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -34,14 +35,22 @@ export default function Navbar() {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="text-2xl font-heading font-bold text-text-dark hover:text-accent transition-colors no-underline group"
           >
             <motion.span
+              className="flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
+              <Image
+                src="/icon.svg"
+                alt="Domotique IA Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               Domotique IA
             </motion.span>
           </Link>

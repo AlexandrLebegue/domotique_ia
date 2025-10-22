@@ -164,7 +164,7 @@ export default function ArticleCard({ article, variant = 'default', index = 0 }:
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
             >
-              Lire l'article
+              Lire l&apos;article
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ 

@@ -97,7 +97,7 @@ export default function Footer() {
               Contact
             </h4>
             <p className="text-text-gray text-sm mb-4">
-              Des questions ? N'hésitez pas à me contacter.
+              Des questions ? N&apos;hésitez pas à me contacter.
             </p>
             <Link
               href="/a-propos#contact"

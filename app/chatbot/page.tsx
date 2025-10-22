@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { ArticleMetadata } from '@/models/Article';
@@ -18,7 +18,7 @@ interface Message {
   timestamp: Date;
 }
 
-export default function ChatbotPage() {
+function ChatbotContent() {
   const searchParams = useSearchParams();
   const questionFromUrl = searchParams.get('question');
   
@@ -35,9 +35,9 @@ export default function ChatbotPage() {
   const hasAutoSubmittedRef = useRef(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // const scrollToBottom = () => {
+  //   messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  // };
 
   // useEffect(() => {
   //   scrollToBottom();
@@ -283,7 +283,7 @@ export default function ChatbotPage() {
                                     {article.excerpt}
                                   </p>
                                   <div className="flex items-center gap-2 text-accent text-sm font-medium">
-                                    Lire l'article
+                                    Lire l&apos;article
                                     <motion.svg 
                                       className="w-4 h-4"
                                       fill="none" 
@@ -442,5 +442,20 @@ export default function ChatbotPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function ChatbotPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-light-gray py-8 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4"></div>
+          <p className="text-text-gray">Chargement...</p>
+        </div>
+      </div>
+    }>
+      <ChatbotContent />
+    </Suspense>
   );
 }

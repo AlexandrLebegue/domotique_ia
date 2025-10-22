@@ -23,7 +23,7 @@ export default function AboutPage() {
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000);
-    } catch (error) {
+    } catch {
       setStatus('error');
       setErrorMessage('Une erreur est survenue. Veuillez réessayer.');
       setTimeout(() => setStatus('idle'), 5000);
@@ -65,21 +65,21 @@ export default function AboutPage() {
 
             <div className="space-y-4 text-text-gray leading-relaxed">
               <p>
-                Passionné de domotique depuis plusieurs années, j'ai découvert Home Assistant et j'ai été 
-                immédiatement séduit par ses possibilités infinies. Ce projet open-source m'a permis de 
+                Passionné de domotique depuis plusieurs années, j&apos;ai découvert Home Assistant et j&apos;ai été 
+                immédiatement séduit par ses possibilités infinies. Ce projet open-source m&apos;a permis de 
                 transformer ma maison en un véritable écosystème intelligent et interconnecté.
               </p>
 
               <p>
-                Fort de mon expérience en tant qu'<strong className="text-text-dark">ingénieur logiciel embarqué 
-                et aérospatial</strong>, j'ai développé une expertise approfondie dans les systèmes complexes, 
-                l'automatisation et l'optimisation. Ces compétences, combinées à ma passion pour la domotique, 
-                m'ont permis de créer des solutions innovantes et fiables pour ma maison connectée.
+                Fort de mon expérience en tant qu&apos;<strong className="text-text-dark">ingénieur logiciel embarqué 
+                et aérospatial</strong>, j&apos;ai développé une expertise approfondie dans les systèmes complexes, 
+                l&apos;automatisation et l&apos;optimisation. Ces compétences, combinées à ma passion pour la domotique, 
+                m&apos;ont permis de créer des solutions innovantes et fiables pour ma maison connectée.
               </p>
 
               <p>
                 Ma mission avec ce blog est de <strong className="text-text-dark">rendre la domotique accessible 
-                à tous</strong>. Je crois profondément en l'avenir de la maison intelligente et je souhaite partager 
+                à tous</strong>. Je crois profondément en l&apos;avenir de la maison intelligente et je souhaite partager 
                 mes connaissances pour aider chacun à créer son propre écosystème Home Assistant, sans avoir besoin 
                 de compétences techniques avancées.
               </p>
@@ -87,14 +87,14 @@ export default function AboutPage() {
               <p>
                 Que vous soyez débutant ou utilisateur avancé, vous trouverez ici des tutoriels détaillés, 
                 des guides pas-à-pas et des conseils pratiques pour tirer le meilleur parti de Home Assistant. 
-                Mon objectif est de démystifier la domotique et de vous montrer qu'il est possible de créer 
+                Mon objectif est de démystifier la domotique et de vous montrer qu&apos;il est possible de créer 
                 une maison intelligente, sécurisée et efficace.
               </p>
             </div>
 
             <div className="mt-8 p-6 bg-light-gray rounded-lg">
               <h3 className="text-xl font-heading font-semibold text-text-dark mb-4">
-                🎯 Mes Domaines d'Expertise
+                🎯 Mes Domaines d&apos;Expertise
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-start gap-3">
@@ -145,7 +145,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-text-gray mb-8">
             Vous avez une question, une suggestion ou vous souhaitez simplement échanger ? 
-            N'hésitez pas à me contacter via le formulaire ci-dessous.
+            N&apos;hésitez pas à me contacter via le formulaire ci-dessous.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">

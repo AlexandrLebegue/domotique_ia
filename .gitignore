@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Google Cloud
+.gcloudignore
+gcloud-config/
+*.log
+cloudbuild-local.json
+.deploy/
+
+# Docker local builds
+docker-compose.override.yml
+*.dockerfile.local

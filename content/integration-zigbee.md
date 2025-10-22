@@ -13,6 +13,12 @@ author: "Alexandre Lebegue"
 
 Le protocole Zigbee est l'un des plus populaires pour la domotique. Découvrons comment l'intégrer facilement avec Home Assistant via Zigbee2MQTT.
 
+<center>
+<img src="/images/screenshots/zigbee.png" />
+</center>
+
+
+
 ## Qu'est-ce que Zigbee ?
 
 Zigbee est un protocole de communication sans fil :

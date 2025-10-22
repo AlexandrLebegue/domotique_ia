@@ -87,7 +87,7 @@ export default function TutorielsPageClient({
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          {categories.map((category, index) => {
+          {categories.map((category) => {
             const Icon = category.icon;
             return (
               <motion.a

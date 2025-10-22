@@ -1,0 +1,151 @@
+<svg width="800" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="900" fill="#f9fafb"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#111827">
+    Article Page Title Structure
+  </text>
+  
+  <!-- Hero Section -->
+  <g>
+    <rect x="50" y="80" width="700" height="200" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="400" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e40af">
+      HERO SECTION (400px height)
+    </text>
+    
+    <!-- Category Badge -->
+    <rect x="340" y="130" width="120" height="30" fill="#3b82f6" rx="15"/>
+    <text x="400" y="151" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+      🏗️ Installation
+    </text>
+    
+    <!-- Page Title -->
+    <text x="400" y="190" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#111827">
+      Article Title (from metadata)
+    </text>
+    
+    <text x="400" y="220" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6b7280">
+      Displayed in hero section
+    </text>
+  </g>
+  
+  <!-- Spacing Arrow 1 -->
+  <g>
+    <line x1="400" y1="290" x2="400" y2="330" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen)"/>
+    <text x="450" y="315" font-family="Arial, sans-serif" font-size="12" fill="#10b981">
+      py-12 (48px)
+    </text>
+  </g>
+  
+  <!-- Meta Info Section -->
+  <rect x="50" y="340" width="700" height="60" fill="#ffffff" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+  <text x="400" y="365" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6b7280">
+    📅 Date • ⏱️ Reading Time • 👤 Author
+  </text>
+  <text x="400" y="385" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#9ca3af">
+    Meta information (mb-8 pb-8)
+  </text>
+  
+  <!-- Spacing Arrow 2 -->
+  <g>
+    <line x1="400" y1="410" x2="400" y2="440" stroke="#f59e0b" stroke-width="2" marker-end="url(#arroworange)"/>
+    <text x="460" y="430" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">
+      mt-8 (32px)
+    </text>
+  </g>
+  
+  <!-- Article Content Area -->
+  <rect x="50" y="450" width="700" height="380" fill="#ffffff" stroke="#3b82f6" stroke-width="3" rx="8"/>
+  <text x="400" y="475" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#3b82f6">
+    ARTICLE CONTENT AREA
+  </text>
+  
+  <!-- H1 Title in Markdown -->
+  <g>
+    <rect x="80" y="520" width="640" height="80" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    
+    <!-- Top margin -->
+    <rect x="80" y="490" width="640" height="30" fill="#fef3c7" opacity="0.7"/>
+    <text x="400" y="509" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#92400e">
+      margin-top: 4rem (64px) ← NEW SPACING
+    </text>
+    
+    <!-- H1 Content -->
+    <text x="400" y="550" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#111827">
+      # H1 Title (from markdown)
+    </text>
+    <line x1="100" y1="570" x2="700" y2="570" stroke="#3b82f6" stroke-width="3"/>
+    <text x="400" y="590" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#6b7280">
+      Border bottom • padding-bottom: 0.5rem
+    </text>
+    
+    <!-- Bottom margin -->
+    <rect x="80" y="600" width="640" height="40" fill="#dcfce7" opacity="0.7"/>
+    <text x="400" y="624" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#166534">
+      margin-bottom: 2.5rem (40px) ← NEW SPACING
+    </text>
+  </g>
+  
+  <!-- Paragraph -->
+  <g>
+    <text x="100" y="665" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+      First paragraph of content...
+    </text>
+    <text x="100" y="685" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+      More content here...
+    </text>
+  </g>
+  
+  <!-- H2 Title -->
+  <g>
+    <rect x="80" y="730" width="640" height="70" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2" rx="4"/>
+    
+    <!-- Top margin -->
+    <rect x="80" y="710" width="640" height="20" fill="#fef3c7" opacity="0.7"/>
+    <text x="400" y="725" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#92400e">
+      margin-top: 4.5rem (72px) ← NEW
+    </text>
+    
+    <!-- H2 Content -->
+    <text x="400" y="760" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1f2937">
+      ## H2 Section Title
+    </text>
+    <line x1="100" y1="775" x2="700" y2="775" stroke="#e5e7eb" stroke-width="2"/>
+    
+    <!-- Bottom margin -->
+    <rect x="80" y="800" width="640" height="30" fill="#dcfce7" opacity="0.7"/>
+    <text x="400" y="819" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#166534">
+      margin-bottom: 2rem (32px) ← NEW
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <g>
+    <rect x="50" y="850" width="700" height="40" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1" rx="4"/>
+    <text x="60" y="870" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#111827">
+      Legend:
+    </text>
+    <rect x="110" y="862" width="15" height="15" fill="#fef3c7" opacity="0.7"/>
+    <text x="130" y="873" font-family="Arial, sans-serif" font-size="11" fill="#374151">
+      Top spacing
+    </text>
+    <rect x="230" y="862" width="15" height="15" fill="#dcfce7" opacity="0.7"/>
+    <text x="250" y="873" font-family="Arial, sans-serif" font-size="11" fill="#374151">
+      Bottom spacing
+    </text>
+    <text x="380" y="873" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#3b82f6">
+      ← Increased spacing for better readability
+    </text>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#10b981"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>
