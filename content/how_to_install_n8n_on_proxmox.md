@@ -94,7 +94,6 @@ Choisir l'option default setting pour simplifier l'installation.
 
 L'installation se fera automatiquement
 
-@todo rajouter ici la suite aec une image lorsque l'instllation a reussi ... 
 
 #### Configuration avancée (optionnel)
 
@@ -122,6 +121,13 @@ L'installation prend généralement 3-5 minutes. Le script va :
 4. Configurer le service systemd
 5. Démarrer N8N automatiquement
 
+
+<center>
+<img src="/images/articles/n8n/image-2.png" />
+</center>
+
+Le serveur N8N est désormais installé !  
+
 ## Configuration initiale de N8N
 
 ### Accéder à l'interface web
@@ -142,56 +148,11 @@ Au premier accès :
 3. **Nom** : votre nom d'utilisateur
 4. Cliquez sur **Create account**
 
-### Configuration des paramètres
+<center>
+<img src="/images/articles/n8n/image-3.png" />
+</center>
 
-Allez dans **Settings** (icône engrenage) :
-
-```yaml
-# Paramètres recommandés
-Timezone: Europe/Paris
-Date format: DD/MM/YYYY
-Time format: 24h
-Language: English (FR non disponible)
-```
-
-## Vérification du bon fonctionnement
-
-### Test 1 : Créer un workflow simple
-
-1. Cliquez sur **+ New workflow**
-2. Ajoutez un nœud **Schedule Trigger** :
-   - Interval : `Every 1 minute`
-3. Ajoutez un nœud **HTTP Request** :
-   - Method : `GET`
-   - URL : `https://api.ipify.org?format=json`
-4. Connectez les deux nœuds
-5. Cliquez sur **Execute Workflow**
-
-Vous devriez voir votre IP publique dans le résultat.
-
-### Test 2 : Vérifier le service systemd
-
-Connectez-vous au conteneur via SSH :
-
-```bash
-# Depuis Proxmox
-pct enter 110  # Remplacez par votre ID de conteneur
-
-# Vérifier le statut
-systemctl status n8n
-
-# Le service doit afficher "active (running)"
-```
-
-### Test 3 : Consulter les logs
-
-```bash
-# Logs en temps réel
-journalctl -u n8n -f
-
-# Dernières 100 lignes
-journalctl -u n8n -n 100
-```
+Le serveur N8N est prêt à être utilisé ! 🚀
 
 ## Ressources
 
